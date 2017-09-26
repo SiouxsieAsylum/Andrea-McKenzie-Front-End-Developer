@@ -1,0 +1,353 @@
+body {
+	overflow-x: hidden;
+	position: relative;
+	margin: 0;
+	background-color: rgb(182, 219, 239);
+	transition: 3s;
+}
+
+/*~~~~~~~~~~~~~~~~navigation bar~~~~~~~~~~~~~~*/
+
+#nav {
+   position: absolute;
+   z-index: 9999;
+   height: 30px;
+   width: 100vw;
+   background-color: rgba(0, 0, 0, 0.7);
+   white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+	position: absolute;
+  right: 0;
+ 	  /*position: fixed;*/
+    /*margin-right: 50vw;*/
+  	list-style-type: none;
+}
+
+li {
+  font-size: 20px;
+  color: rgb(209, 209, 209);
+  display: inline;
+  float: right;
+  margin-top: -13px;
+  margin-right: 5vw;
+}
+
+li:hover {
+	color: white;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~~~*/
+
+header {
+	height: 100vh;
+	min-height: 200px;
+	width: 110vw;
+	overflow-x: hidden;
+	background-color: rgb(2, 15, 25);
+	font-size: 25px;
+	line-height: 0px;
+}
+
+header div {
+	color: rgb(8, 61, 102);
+	display: inline-block;
+	margin: 0;
+	font-family:'Titillium Web', sans-serif;
+
+}
+
+.header-text {
+	font-family:'Ubuntu', sans-serif;
+	position: absolute;
+	color: white;
+	white-space: nowrap;
+	text-shadow: 1px 1px 5px rgb(153, 192, 219);
+}
+
+h1 {
+	font-size: 155px;
+	padding-top: 30vh;
+	margin-left: 7vw;
+}
+
+h2 {
+	font-size: 80px;
+	padding-top: 50vh;
+	margin-left: 25vw;
+	color:rgb(199, 215, 226);
+}
+
+h3 {
+	font-size: 60px;
+	padding-top: 62vh;
+	margin-left: 32vw;
+	color:rgb(199, 215, 226)
+}
+
+/*~~~~~~~~~~~~~~~~~~nightsky~~~~~~~~~~~~~~~~~~~~~~*/
+
+#scene {
+  position: relative;
+  overflow: hidden;
+  height: 110vh;
+  width: 110vw;
+  background-color:rgb(0, 24, 63);
+  background: linear-gradient(35deg,rgb(0, 24, 63) 10%, rgb(17, 0, 14));
+}
+
+#starContainer {
+  color: white;
+  z-index: -1;
+  height: inherit;
+  width: inherit;
+}
+
+.ground{
+  	position: absolute;
+  }
+
+ #high{
+  z-index: 2;
+  width: 500px;
+  border-bottom: 255px solid rgb(7, 7, 7);
+  border-left: 200px solid transparent;
+  border-top: 100px solid transparent;
+  /*margin-top:47%;*/
+  /*margin-left: 62%;*/
+  bottom:0vw;
+  right:-10vw;
+}
+
+#main{
+
+  width: 500px;
+  border-bottom: 155px solid rgb(3, 3, 3);
+  border-left: 150px solid transparent;
+  border-top: 50px solid transparent;
+  bottom:0;
+  right:0;
+  /*margin-top:58%;*/
+  /*margin-left: 58%;*/
+}
+
+#far{
+  z-index: 1;
+  width: 200px;
+  border-bottom: 115px solid rgb(5, 5, 5);
+  border-left: 150px solid transparent;
+  border-top: 50px solid transparent;
+   bottom:0;
+  right:30vw;
+
+}
+
+.ocean{
+	position: absolute;
+	width: 110%;
+}
+
+#light{
+	height: 20px;
+	background-color: rgb(16, 34, 63);
+	bottom:50px;
+}
+
+#mid{
+	height: 30px;
+	background-color:rgb(10, 21, 40);
+	bottom:30px;
+}
+
+#dark{
+	height: 40px;
+	background-color:rgb(5, 11, 22);
+	bottom:0;
+}
+
+.star{
+	animation-name: twinkle;
+}
+
+/*add waves with js... add 2 to each margin at different delays*/
+
+/*~~~~~~~~~~~~~~~~~~buttonContainer~~~~~~~~~~~~~~~~~~*/
+
+#buttonsContainer {
+  /*background-color: red;*/
+  position: absolute;
+  margin-top: 40vh;
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.online-presence {
+  height: 10vh;
+  width: 30vw;
+  background-color: rgb(210, 221, 239);
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px 10px rgb(3, 13, 30);
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 2s;
+  opacity: 0;
+}
+
+/*.online-presence img {
+  text-indent: -9999px;
+}*/
+
+#myGithub{
+  background-image: url(../images/githubicon.png);
+  transition-delay: 1s;
+}
+
+#myLinkedIn{
+  background-image: url(../images/LinkedinLogoTransparent.png);
+  transition-delay: 2s;
+}
+
+#myCodepen{
+  background-image: url(../images/codepen.png);
+  transition-delay: 3s;
+}
+
+/*.container {
+	height: 500px;
+	width: inherit;
+	border-bottom: 1px solid black;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 500px;
+}*/
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~ANIMATIONS~~~~~~~~~~~~~~~~*/
+
+/*star twinkling*/
+@keyframes twinkle {
+	0%, 100% {opacity: 1.0;}
+	50% {opacity: 0.1;}
+}
+
+/*button fadein*/
+/*@keyframes fadein {
+  0% {opacity: 0.0;}
+  100% {opacity: 1.0;}
+}*/
+
+/*background colorshift*/
+
+/*@keyframes color {
+	0% {background-color: rgb(119, 0, 0);}
+	20% {background-color: rgb(147, 14, 14);}
+	40% {background-color: rgb(170, 34, 34);}
+	50% {background-color: rgb(178, 55, 55);}
+	60% {background-color: rgb(170, 34, 34);}
+	80% {background-color: rgb(147, 14, 14);}
+	100% {background-color: rgb(119, 0, 0);}
+}
+
+@-webkit-keyframes color {
+	0% {background-color: rgb(119, 0, 0);}
+	20% {background-color: rgb(147, 14, 14);}
+	40% {background-color: rgb(170, 34, 34);}
+	50% {background-color: rgb(178, 55, 55);}
+	60% {background-color: rgb(170, 34, 34);}
+	80% {background-color: rgb(147, 14, 14);}
+	100% {background-color: rgb(119, 0, 0);}
+}
+
+@-moz-keyframes color {
+	0% {background-color: rgb(119, 0, 0);}
+	20% {background-color: rgb(147, 14, 14);}
+	40% {background-color: rgb(170, 34, 34);}
+	50% {background-color: rgb(178, 55, 55);}
+	60% {background-color: rgb(170, 34, 34);}
+	80% {background-color: rgb(147, 14, 14);}
+	100% {background-color: rgb(119, 0, 0);}
+}
+*/
+
+
+
+/*~~~~~~~~~~~~~media queries~~~~~~~~~~~~~~~~~*/
+
+/*Too Big*/
+
+/*@media(min-width: 900px) {
+	h1 {
+		margin-top: 5%;
+		margin-left: 30%;
+		margin-top: 10%;
+	}
+
+	h2 {
+		margin-top: 9%;
+		margin-left: 38%;
+		font-size: 40px;
+	}
+
+	h3 {
+		margin-top: 12.5%;
+		margin-left: 42%;
+		font-size: 30px;
+	}
+}
+*/
+
+/*Too Small*/
+
+/*@media(max-width: 900px) {
+	h1 {
+		margin-top: 8%;
+
+	}
+
+	h2 {
+		margin-top: 15%;
+		font-size: 40px;
+	}
+
+	h3 {
+		margin-top: 20%;
+		font-size: 30px;
+	}
+}
+
+
+@media(max-width: 600px) {
+	h1 {
+		margin-top: 10%;
+		margin-left: 15%;
+		font-size: 50px;
+	}
+
+	h2 {
+		margin-top: 25%;
+		margin-left: 20%;
+		font-size: 40px;
+	}
+
+	h3 {
+		margin-top: 35%;
+		margin-left: 30%;
+		font-size: 30px;
+	}
+
+	#nav ul:first-child{
+		height: 50px;
+		margin-left: 0px;
+		margin-right: 10px;
+	}
+}*/
+
