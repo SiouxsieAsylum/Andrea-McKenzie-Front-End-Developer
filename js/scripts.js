@@ -3,11 +3,10 @@ var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
 
 var divArray = document.getElementsByClassName("square");
 var header = document.getElementsByTagName("header");
-<<<<<<< HEAD
+
 var overlay = document.getElementById("icon-wrapper");
 // var icons = Array.from(document.getElementsByClassName("menuIcon"));
-=======
->>>>>>> 6e5a5bbc0a480e644e21059578202cf1de15dbe5
+
 var stars = document.getElementById("starContainer");
 var interval = 0;
 var numOfDivs = window.innerWidth;
@@ -60,9 +59,6 @@ setInterval(function(){
 overlay.addEventListener("mousemove", function launchNavScreen(){
   header[0].style.filter="blur(2px)";
   overlay.style.opacity="1";
-  // for (let i in icons){
-  //   icons[i].style.opacity="1";
-  // }
 });
 
 
