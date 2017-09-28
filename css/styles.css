@@ -1,0 +1,572 @@
+body {
+	overflow-x: hidden;
+	position: relative;
+	margin: 0;
+	background-color: rgb(182, 219, 239);
+	transition: 3s;
+}
+
+/*~~~~~~~~~~~~~~~~navigation bar~~~~~~~~~~~~~~*/
+
+#nav {
+   position: absolute;
+   z-index: 9999;
+   height: 30px;
+   width: 100vw;
+   background-color: rgba(0, 0, 0, 0.7);
+   white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+	position: absolute;
+  right: 0;
+ 	  /*position: fixed;*/
+    /*margin-right: 50vw;*/
+  	list-style-type: none;
+}
+
+li {
+  font-size: 20px;
+  color: rgb(209, 209, 209);
+  display: inline;
+  float: right;
+  margin-top: -13px;
+  margin-right: 5vw;
+}
+
+li:hover {
+	color: white;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~~~*/
+
+header {
+	height: 100vh;
+	min-height: 200px;
+	width: 110vw;
+	overflow-x: hidden;
+	background-color: rgb(2, 15, 25);
+	font-size: 25px;
+	line-height: 0px;
+  transition: 1s;
+}
+
+.square {
+	color: rgb(8, 61, 102);
+	display: inline-block;
+	margin: 0;
+	font-family:'Titillium Web', sans-serif;
+
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~black overlay~~~~~~~~~~~~~~~~~*/
+
+#icon-wrapper{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.8));
+  transition: 1s;
+  opacity: 0;
+}
+
+#text-wrapper{
+  position: absolute;
+  z-index: 1;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  /*background: radial-gradient(circle, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.8));*/
+  /*transition: 1s;*/
+  /*opacity: 0;*/
+}
+
+.header-text {
+  font-family:'Ubuntu', sans-serif;
+  filter: none;
+  position: absolute;
+  color: white;
+  white-space: nowrap;
+  text-shadow: 1px 1px 5px rgb(153, 192, 219);
+  opacity: 1;
+}
+
+h1 {
+
+  font-size: 155px;
+  padding-top: 25vh;
+  margin-left: 7vw;
+}
+
+h2 {
+
+  font-size: 80px;
+  padding-top: 50vh;
+  margin-left: 25vw;
+  color:rgb(199, 215, 226);
+}
+
+h3 {
+
+  font-size: 60px;
+  padding-top: 62vh;
+  margin-left: 32vw;
+  color:rgb(199, 215, 226)
+}
+
+.menuIcon {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 10vh;
+  width: 10vh;
+  text-indent: -99999px;
+  /*opacity: 0;*/
+  transition: 1s;
+}
+
+#projects{
+background-image:url(../images/white-icons/transparent-white-folder.png);
+top: 10vh;
+left: 10vh;
+transition: 0s;
+z-index: 1;
+}
+
+#projects:hover {
+  background-image:url(../images/white-icons/transparent-white-opened-folder.png)
+}
+
+#skills{
+  background-image:url(../images/white-icons/ribbon-icon.png);
+  top: 10vh;
+  right: 10vh;
+  z-index: 1;
+}
+
+#skills:hover {
+  transform: rotate(270deg);
+}
+
+#websites{
+  background-image:url(../images/white-icons/search-icon.png);
+  /*margin-left*/
+  left: 49vw;
+  top: 27vh;
+  z-index: 1;
+}
+
+#websites:hover {
+  animation: search 2s 1;
+}
+
+#employment{
+  background-image:url(../images/white-icons/white-briefcase.png);
+  bottom: 10vh;
+  left: 10vh;
+
+}
+
+#employment:hover{
+  animation: wiggle 2s 1;
+}
+
+#education{
+  background-image:url(../images/white-icons/graduation-cap-xxl.png);
+  bottom: 10vh;
+  right: 10vh;
+  transform-origin: 0%,0%;
+}
+
+#education:hover{
+  transform: rotate(360deg);
+}
+
+/*~~~~~~~~~~~~~~~~~~nightsky~~~~~~~~~~~~~~~~~~~~~~*/
+
+#scene {
+  position: relative;
+  overflow: hidden;
+  height: 110vh;
+  width: 110vw;
+  background-color:rgb(0, 24, 63);
+  background: linear-gradient(35deg,rgb(0, 24, 63) 10%, rgb(17, 0, 14));
+}
+
+#starContainer {
+  color: white;
+  z-index: -1;
+  height: inherit;
+  width: inherit;
+}
+
+.ground{
+  	position: absolute;
+  }
+
+ #high{
+  z-index: 2;
+  width: 500px;
+  border-bottom: 255px solid rgb(7, 7, 7);
+  border-left: 200px solid transparent;
+  border-top: 100px solid transparent;
+  /*margin-top:47%;*/
+  /*margin-left: 62%;*/
+  bottom:0vw;
+  right:-10vw;
+}
+
+#main{
+
+  width: 500px;
+  border-bottom: 155px solid rgb(3, 3, 3);
+  border-left: 150px solid transparent;
+  border-top: 50px solid transparent;
+  bottom:0;
+  right:0;
+  /*margin-top:58%;*/
+  /*margin-left: 58%;*/
+}
+
+#far{
+  z-index: 1;
+  width: 200px;
+  border-bottom: 115px solid rgb(5, 5, 5);
+  border-left: 150px solid transparent;
+  border-top: 50px solid transparent;
+   bottom:0;
+  right:30vw;
+
+}
+
+.ocean{
+	position: absolute;
+	width: 110%;
+}
+
+#light{
+	height: 20px;
+	background-color: rgb(16, 34, 63);
+	bottom:50px;
+}
+
+#mid{
+	height: 30px;
+	background-color:rgb(10, 21, 40);
+	bottom:30px;
+}
+
+#dark{
+	height: 40px;
+	background-color:rgb(5, 11, 22);
+	bottom:0;
+}
+
+.star{
+	animation-name: twinkle;
+}
+
+/*add waves with js... add 2 to each margin at different delays*/
+
+/*~~~~~~~~~~~~~~~~~~buttonContainer~~~~~~~~~~~~~~~~~~*/
+
+#buttonsContainer {
+  /*background-color: red;*/
+  position: absolute;
+  margin-top: 40vh;
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.online-presence {
+  height: 10vh;
+  width: 30vw;
+  background-color: rgb(210, 221, 239);
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px 10px rgb(3, 13, 30);
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 2s;
+  opacity: 0;
+}
+
+/*.online-presence img {
+  text-indent: -9999px;
+}*/
+
+#myGithub{
+  background-image: url(../images/website-logos/githubicon.png);
+  transition-delay: 1s;
+}
+
+#myLinkedIn{
+  background-image: url(../images/website-logos/LinkedinLogoTransparent.png);
+  transition-delay: 2s;
+}
+
+#myCodepen{
+  background-image: url(../images/website-logos/codepen.png);
+  transition-delay: 3s;
+}
+
+/*.container {
+	height: 500px;
+	width: inherit;
+	border-bottom: 1px solid black;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 500px;
+}*/
+
+/*~~~~~~~~~~~~~~~~~~~~DUNES~~~~~~~~~~~~~~~~~~~~*/
+
+#duneContainer{
+  position:relative;
+  height: 100vh;
+  width:100vw;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
+
+#sky{
+  background-color: rgb(28, 92, 255);
+  background: linear-gradient(rgb(28, 92, 255),rgb(130, 165, 255));
+  height: 110vh;
+  width: 110vw;
+
+}
+
+#dunes {
+  padding: 0;
+  height: 101vw;
+  position: absolute;
+  margin-top: 30vh;
+  width: 40vw;
+  padding-right: 30vh;
+  transform: rotate(270deg);
+  transform-origin: 1% 1%;
+}
+
+.dune {
+  height: 40vw;
+  width: 40vw;
+  position: relative;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+#front {
+  background-color: rgb(255, 179, 28);
+  z-index: 2;
+}
+
+#secondFront {
+  background-color: rgb(183, 128, 20);
+  z-index: 1;
+}
+
+#thirdFront {
+  background-color: rgb(132, 92, 13);
+}
+
+#ground {
+  position: absolute;
+  height: 20vh;
+  width: 100vw;
+  bottom: 0;
+}
+
+.sand {
+  margin-top: 20vh;
+  margin-left: -2vw;
+  width: 110vw;
+  height:30vh;
+}
+
+#foreground {
+  background-color: rgb(247, 187, 69);
+  margin-left: -8vw;
+  transform: rotate(10deg);
+}
+
+#background{
+  margin-top: -30vh;
+  margin-left: -8vw;
+  background-color: rgb(178, 135, 49);
+  transform: rotate(-10deg);
+}
+
+#content-container {
+  position: absolute;
+  margin-top: -100vh;
+  height: 40vw;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+#content-container div{
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+}
+
+#jobLogo {
+  height: 30vw;
+  width: 30vw;
+  border: 10px double rgba(255, 255, 255, 0.2);
+}
+
+#description {
+  height: 31vw;
+  width: 31vw;
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~ANIMATIONS~~~~~~~~~~~~~~~~*/
+
+/*star twinkling*/
+@keyframes twinkle {
+	0%, 100% {opacity: 1.0;}
+	50% {opacity: 0.1;}
+}
+
+/*button fadein*/
+@keyframes search {
+  0% {transform: scale(1,1) translateX(0);}
+  25% { transform: scale(1.25,1.25) translateX(1vw);}
+  50% {transform: scale(1.25,1.25) translateX(-2vw);}
+  75% {transform: scale(1.25,1.25) translateX(1vw);}
+  100% {{transform: scale(1.25,1.25) translateX(0);}}
+
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(0deg);}
+  20% {transform: rotate(25deg);}
+  40% { transform: rotate(-25deg);}
+  60% {transform: rotate(45deg);}
+  80% {transform: rotate(-45deg);}
+  100% {transform: rotate(0deg);}
+}
+
+
+/*background colorshift*/
+
+/*@keyframes color {
+	0% {background-color: rgb(119, 0, 0);}
+	20% {background-color: rgb(147, 14, 14);}
+	40% {background-color: rgb(170, 34, 34);}
+	50% {background-color: rgb(178, 55, 55);}
+	60% {background-color: rgb(170, 34, 34);}
+	80% {background-color: rgb(147, 14, 14);}
+	100% {background-color: rgb(119, 0, 0);}
+}
+
+@-webkit-keyframes color {
+	0% {background-color: rgb(119, 0, 0);}
+	20% {background-color: rgb(147, 14, 14);}
+	40% {background-color: rgb(170, 34, 34);}
+	50% {background-color: rgb(178, 55, 55);}
+	60% {background-color: rgb(170, 34, 34);}
+	80% {background-color: rgb(147, 14, 14);}
+	100% {background-color: rgb(119, 0, 0);}
+}
+
+@-moz-keyframes color {
+	0% {background-color: rgb(119, 0, 0);}
+	20% {background-color: rgb(147, 14, 14);}
+	40% {background-color: rgb(170, 34, 34);}
+	50% {background-color: rgb(178, 55, 55);}
+	60% {background-color: rgb(170, 34, 34);}
+	80% {background-color: rgb(147, 14, 14);}
+	100% {background-color: rgb(119, 0, 0);}
+}
+*/
+
+
+
+/*~~~~~~~~~~~~~media queries~~~~~~~~~~~~~~~~~*/
+
+/*Too Big*/
+
+/*@media(min-width: 900px) {
+	h1 {
+		margin-top: 5%;
+		margin-left: 30%;
+		margin-top: 10%;
+	}
+
+	h2 {
+		margin-top: 9%;
+		margin-left: 38%;
+		font-size: 40px;
+	}
+
+	h3 {
+		margin-top: 12.5%;
+		margin-left: 42%;
+		font-size: 30px;
+	}
+}
+*/
+
+/*Too Small*/
+
+/*@media(max-width: 900px) {
+	h1 {
+		margin-top: 8%;
+
+	}
+
+	h2 {
+		margin-top: 15%;
+		font-size: 40px;
+	}
+
+	h3 {
+		margin-top: 20%;
+		font-size: 30px;
+	}
+}
+
+
+@media(max-width: 600px) {
+	h1 {
+		margin-top: 10%;
+		margin-left: 15%;
+		font-size: 50px;
+	}
+
+	h2 {
+		margin-top: 25%;
+		margin-left: 20%;
+		font-size: 40px;
+	}
+
+	h3 {
+		margin-top: 35%;
+		margin-left: 30%;
+		font-size: 30px;
+	}
+
+	#nav ul:first-child{
+		height: 50px;
+		margin-left: 0px;
+		margin-right: 10px;
+	}
+}*/
+

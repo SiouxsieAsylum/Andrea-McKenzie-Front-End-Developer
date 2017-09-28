@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Andrea McKenzie</title>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web|Ubuntu" rel="stylesheet">
+
+</head>
+<body onload="populate();scrollTo();">
+
+<header id = "blue-header"></header>
+
+
+<div id = "icon-wrapper">
+  <a href=""><div class= "menuIcon" id="projects"><p>Projects</p></div></a>
+  <a href=""><div class= "menuIcon" id="skills"><p>Skills</div></p></a>
+  <a href="#scene"><div class= "menuIcon" id="websites"><p>Online Presence</p></div></a>
+  <a href="#duneContainer"><div class= "menuIcon" id="employment"><p>Employment History</p></div></a>
+  <a href=""><div class= "menuIcon" id="education"><p>Education</div></p></a>
+</div>
+
+<div id = "text-wrapper">
+  <h1 class="header-text">Andrea McKenzie</h1>
+  <h2 class="header-text">Full Stack Developer</h2>
+  <h3 class="header-text">Android Developer</h3>
+</div>
+
+
+
+<div id="nav">
+  <ul>
+    <a href=""><li>Skills &amp; Proficiencies</li></a>
+    <a href="#duneContainer"><li>Work History</li></a>
+    <a href=""><li>Projects</li></a>
+    <a href="#scene"><li>Online Presence</li></a>
+  </ul>
+</div>
+
+<!-- have a layered div over the header with dark black radius translucent to black -->
+<!-- have the text all fly in from all sides and random hover effects with keyframes-->
+  <!-- how to transition between screens? -->
+
+
+
+<div id="scene">
+  <span id="starContainer">
+
+  </span>
+
+
+  <div class="ground" id="far"></div>
+  <div class="ground" id="main"></div>
+  <div class="ground" id="high"></div>
+  <div class="ocean" id="light"></div>
+  <div class="ocean" id="mid"></div>
+  <div class="ocean" id="dark"></div>
+
+  <div id="buttonsContainer">
+    <a href="https://github.com/SiouxsieAsylum"><div class="online-presence" id="myGithub"><!-- <img src="images/githubicon.png" alt="My GitHub"> --></div></a>
+    <a href="https://www.linkedin.com/in/andrea-mckenzie-93abb649/"><div class="online-presence" id="myLinkedIn"><!-- <img src="images/LinkedinLogoTransparent.png" alt="My LinkedIn"> --></div></a>
+    <a href="https://codepen.io/SiouxsieAsylum/"><div class="online-presence" id="myCodepen"><!-- <img src="images/codepen.png" alt="My CodePen"> --></div></a>
+  <!-- <a href="https://github.com/SiouxsieAsylum"><div class="online-presence"><img src="" alt="My GitHub"></div></a> -->
+  </div>
+</div>
+
+<div id="duneContainer">
+<div id="sky"></div>
+  <div id = "content-container">
+      <div id = "jobLogo"></div>
+      <div id = "description"></div>
+  </div>
+  <div id = "dunes">
+    <div class="dune" id="front"></div>
+    <div class="dune" id="secondFront"></div>
+    <div class="dune" id="thirdFront"></div>
+  </div>
+  <div id="ground">
+    <div class = "sand" id="foreground"></div>
+    <div class = "sand" id="background"></div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- any extraneous jquery -->
+<!-- <script>
+$(document).ready(function() {
+	$(header).on("click", function(){
+		$(header).slideUp("slow");
+	});
+});
+
+</script> -->
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
