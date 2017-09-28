@@ -3,8 +3,11 @@ var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
 
 var divArray = document.getElementsByClassName("square");
 var header = document.getElementsByTagName("header");
+<<<<<<< HEAD
 var overlay = document.getElementById("icon-wrapper");
 // var icons = Array.from(document.getElementsByClassName("menuIcon"));
+=======
+>>>>>>> 6e5a5bbc0a480e644e21059578202cf1de15dbe5
 var stars = document.getElementById("starContainer");
 var interval = 0;
 var numOfDivs = window.innerWidth;
@@ -46,7 +49,6 @@ setInterval(function(){
   if (interval == divArray.length) {
   	for(let d in divArray) {
   	 divArray[d].innerHTML="";
-     // divArray[d].style.backgroundColor="rgba(8, 61, 102, 0.0)"
     }
     interval = 0;
   }
@@ -62,6 +64,9 @@ overlay.addEventListener("mousemove", function launchNavScreen(){
   //   icons[i].style.opacity="1";
   // }
 });
+
+
+// }, 250);
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~controls order of all operations based on scroll height~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -177,6 +182,7 @@ function setTopPosition(){
 
   return rand + "px";
 }
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~ Dune Parralax ~~~~~~~~~~~~~~~~~~~~~*/
 
 let front = document.getElementById("front");

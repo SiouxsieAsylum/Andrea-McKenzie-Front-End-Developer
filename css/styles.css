@@ -52,16 +52,23 @@ header {
 	background-color: rgb(2, 15, 25);
 	font-size: 25px;
 	line-height: 0px;
+
   transition: 1s;
 }
 
-.square {
+/*.square {
+=======
+}
+*/
+header div {
+
 	color: rgb(8, 61, 102);
 	display: inline-block;
 	margin: 0;
 	font-family:'Titillium Web', sans-serif;
 
 }
+
 
 
 
@@ -191,6 +198,34 @@ z-index: 1;
 
 #education:hover{
   transform: rotate(360deg);
+
+/*.header-text {
+	font-family:'Ubuntu', sans-serif;
+	position: absolute;
+	color: white;
+	white-space: nowrap;
+	text-shadow: 1px 1px 5px rgb(153, 192, 219);
+}
+
+h1 {
+	font-size: 155px;
+	padding-top: 30vh;
+	margin-left: 7vw;
+}
+
+h2 {
+	font-size: 80px;
+	padding-top: 50vh;
+	margin-left: 25vw;
+	color:rgb(199, 215, 226);
+}
+
+h3 {
+	font-size: 60px;
+	padding-top: 62vh;
+	margin-left: 32vw;
+	color:rgb(199, 215, 226)*/
+
 }
 
 /*~~~~~~~~~~~~~~~~~~nightsky~~~~~~~~~~~~~~~~~~~~~~*/
@@ -309,17 +344,23 @@ z-index: 1;
 }*/
 
 #myGithub{
+
   background-image: url(../images/website-logos/githubicon.png);
+
   transition-delay: 1s;
 }
 
 #myLinkedIn{
+
   background-image: url(../images/website-logos/LinkedinLogoTransparent.png);
+
   transition-delay: 2s;
 }
 
 #myCodepen{
+
   background-image: url(../images/website-logos/codepen.png);
+
   transition-delay: 3s;
 }
 
@@ -330,6 +371,7 @@ z-index: 1;
 	background-color: rgba(255, 255, 255, 0.5);
 	margin-top: 500px;
 }*/
+
 
 /*~~~~~~~~~~~~~~~~~~~~DUNES~~~~~~~~~~~~~~~~~~~~*/
 
@@ -436,6 +478,7 @@ z-index: 1;
 
 }
 
+
 /* ~~~~~~~~~~~~~~~~~~ANIMATIONS~~~~~~~~~~~~~~~~*/
 
 /*star twinkling*/
@@ -445,6 +488,7 @@ z-index: 1;
 }
 
 /*button fadein*/
+
 @keyframes search {
   0% {transform: scale(1,1) translateX(0);}
   25% { transform: scale(1.25,1.25) translateX(1vw);}
