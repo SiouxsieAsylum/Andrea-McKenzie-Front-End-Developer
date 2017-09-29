@@ -205,14 +205,86 @@ window.addEventListener("mousemove", function(e){
 
 // ~~~~~~~~~~~~~~~~~~~ content-management ~~~~~~~~~~~~~~~~~~~~~~~
 
+let dunes = document.getElementById("duneContainer");
 let jobLogo = document.getElementById("jobLogo");
+let datesLocalle = document.getElementById("dates-and-localle");
 let description = document.getElementById("description");
 
 
 // add image paths to array
 // add descriptions to array
 //  need a way to increment slideshow
-let jobImages = [];
-let jobDescs = [];
+let jobImages = ["GA_Logo.png","perscholas.png","whole-foods.png","agrion.jpeg","starbucks.png"];
+let jobDates = ["New York, NY  \n Sept 2017 - Dec 2017","Bronx, NY  \n Aug 2017 - Sept 2017","New York, NY \n Sept 2013 - Aug 2017","Remote \n Feb 2014-Sept 2014","Elmhurst, NY \n May 2010 - Oct 2013"];
+let jobDescs = ["Underwent on-the-job training in full-stack web developement. Developed, launched, and maintained dynamic websites and web applications. Cultivated a mastery of the command line and git. Tutored fellow cohort members and encouraged teamwork.","Developed and maintained static websites with varying levels of interactiveness, size, and complexity. Cultivated an eye for UX/UI design. Mastered the new features of HTML5 and CSS3, and learned proper file structure, best practices, and how to integrate APIs. ","Coordinated orders with distributors to maximize accuracy and negotiate prices to maximize profit margin.  Maximized and streamlined  interdepartmental and vertical communication for sake of team satisfaction and efficiency. Worked directly with store and regional leadership to troubleshoot, fix and clean broken growler lines.","Performed market research and wrote analytical, concise snapshots of marketing reports on cutting-edge clean energy, clean tech, and sustainability issues, including weekly roundtable discussions. Reports cover a wide range of topics including renewable energy, green buildings, green data centers, energy storage, and corporate sustainability.","Learned drink recipies literatim and executed each perfectly while providing a clean, welcoming environment for partners and clientelle. Checked bills for authenticity and calculated/deliniated tip revenue for the team based on hours."];
+
+let jobPosition = 0;
+
+  function jobUp(){
+    jobPosition++;
+  }
+
+  function jobDown(){
+    jobPosition--;
+  }
+jobSlideShow();
+
+
+function jobSlideShow(){
+  let last = jobImages.length - 1;
+
+  if (jobPosition > last) {
+    console.log("too high");
+    jobPosition = 0; //or we can black out the progression button either or;
+  } else if (jobPosition < 0) {
+    console.log("too low");
+    jobPosition = last;
+  }
+
+  // jobLogo.style.transform="translateX(3vw)";
+  // jobLogo.style.opacity="0";
+  jobLogo.style.backgroundImage = `url(images/website-logos/${jobImages[jobPosition]})`;
+  // jobLogo.style.opacity="1";
+  // jobLogo.style.transform="translateX(-3vw)";
+
+  // datesLocalle.style.transform="translateX(3vw)";
+  // datesLocalle.style.opacity="0";
+  datesLocalle.innerHTML = jobDates[jobPosition];
+  // datesLocalle.style.opacity="1";
+  // datesLocalle.style.transform="translateX(-3vw)"
+
+  // description.style.transform="translateX(3vw)";
+  // description.style.opacity="0";
+  description.innerHTML = jobDescs[jobPosition];
+  // description.style.opacity="1";
+  // description.style.transform="translateX(-3vw)";
+
+}
+
+// function byeJobs(){
+//   setTimeout(jobLogo.style.transform="translateX(3vw)", 500);
+//   setTimeout(jobLogo.style.opacity="0", 500);
+// }
+
+// function hiJobs(){
+//   setTimeout(jobLogo.style.opacity="1", 500);
+//   setTimeout(jobLogo.style.transform="translateX(-6vw)", 500);
+// }
+
+window.addEventListener("keydown", function(e){
+  // console.log("I'm listening");
+  let arrow = e.which || e.keyCode;
+  // console.log(arrow);
+  if (arrow == 37) {
+    // byeJobs();
+    jobUp();
+    // hiJobs()
+    console.log(jobPosition);
+  } else if (arrow == 39) {
+    jobDown();
+    console.log(jobPosition);
+  }
+  jobSlideShow();
+})
 
 
