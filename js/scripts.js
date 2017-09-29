@@ -84,8 +84,6 @@ function scrollTo(){
 //~~~~~~~~~~~~~~~~~~STARRY NIGHT EXPOSED~~~~~~~~~~~~~~~
 
     if (starTop < windowHeight){
-      console.log(starTop);
-      console.log(stars.children.length);
       if(stars.children.length <= 12){
         starz();
       }
@@ -189,10 +187,6 @@ let background = document.getElementById("background");
 
 window.addEventListener("mousemove", function(e){
   let pageX = e.clientX;
-  // let windowSize = window.innerWidth;
-  // let dune = document.getElementById("dunes")
-  // let duneTop =
-;
 
 //   translation unrotates the divs
 
@@ -210,7 +204,8 @@ let jobLogo = document.getElementById("jobLogo");
 let datesLocalle = document.getElementById("dates-and-localle");
 let description = document.getElementById("description");
 
-
+let backArrow = document.getElementById("back-arrow");
+let frontArrow = document.getElementById("front-arrow");
 // add image paths to array
 // add descriptions to array
 //  need a way to increment slideshow
@@ -221,6 +216,7 @@ let jobDescs = ["Underwent on-the-job training in full-stack web developement. D
 let jobPosition = 0;
 
   function jobUp(){
+
     jobPosition++;
   }
 
@@ -241,48 +237,39 @@ function jobSlideShow(){
     jobPosition = last;
   }
 
-  // jobLogo.style.transform="translateX(3vw)";
-  // jobLogo.style.opacity="0";
   jobLogo.style.backgroundImage = `url(images/website-logos/${jobImages[jobPosition]})`;
-  // jobLogo.style.opacity="1";
-  // jobLogo.style.transform="translateX(-3vw)";
-
-  // datesLocalle.style.transform="translateX(3vw)";
-  // datesLocalle.style.opacity="0";
   datesLocalle.innerHTML = jobDates[jobPosition];
-  // datesLocalle.style.opacity="1";
-  // datesLocalle.style.transform="translateX(-3vw)"
-
-  // description.style.transform="translateX(3vw)";
-  // description.style.opacity="0";
   description.innerHTML = jobDescs[jobPosition];
-  // description.style.opacity="1";
-  // description.style.transform="translateX(-3vw)";
 
 }
+setInterval(revert, 250);
 
-// function byeJobs(){
-//   setTimeout(jobLogo.style.transform="translateX(3vw)", 500);
-//   setTimeout(jobLogo.style.opacity="0", 500);
-// }
+function clickWhite(arrow){
+  arrow.style.color="white";
+  arrow.innerHTML="&#10154;";
+}
 
-// function hiJobs(){
-//   setTimeout(jobLogo.style.opacity="1", 500);
-//   setTimeout(jobLogo.style.transform="translateX(-6vw)", 500);
-// }
+function revert(){
+  frontArrow.style.color="black";
+  frontArrow.innerHTML="&#10153;";
+
+  backArrow.style.color="black";
+  backArrow.innerHTML="&#10153;";
+}
+
 
 window.addEventListener("keydown", function(e){
-  // console.log("I'm listening");
   let arrow = e.which || e.keyCode;
-  // console.log(arrow);
   if (arrow == 37) {
-    // byeJobs();
+
+    clickWhite(backArrow);
     jobUp();
-    // hiJobs()
-    console.log(jobPosition);
+
+
   } else if (arrow == 39) {
+    clickWhite(frontArrow);
     jobDown();
-    console.log(jobPosition);
+
   }
   jobSlideShow();
 })

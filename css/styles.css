@@ -369,6 +369,7 @@ h3 {
   margin:0;
   padding:0;
   overflow: hidden;
+
 }
 
 #duneContainer h1 {
@@ -496,9 +497,46 @@ h3 {
   font-size: 2vw;
 }
 
-/*.arrow_keys {
+#use-arrow{
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+  top: 30vh;
+  left: 41vw;
+  font-size: 2vh;
+  z-index: 1;
+}
 
-}*/
+#use-arrow, #dates-and-localle{
+  white-space: pre;
+}
+
+#back-arrow, #front-arrow {
+  font-size: 6vh;
+  animation-duration: 1s;
+  cursor: pointer;
+
+}
+
+#back-arrow:hover, #front-arrow:hover {
+  color: white;
+
+}
+
+#back-arrow {
+  float: left;
+  transform: scale(-1);
+  display: inline-block;
+  animation: backArrow 1s infinite;
+
+}
+
+#front-arrow {
+  float: right;
+   animation: frontArrow 1s infinite;
+}
+
+
 
 
 /* ~~~~~~~~~~~~~~~~~~ANIMATIONS~~~~~~~~~~~~~~~~*/
@@ -529,6 +567,20 @@ h3 {
   100% {transform: rotate(0deg);}
 }
 
+@keyframes frontArrow {
+  0%, 100% {transform: translateX(0);}
+  50% {transform: translateX(-3vw);}
+}
+
+@keyframes backArrow {
+  0%, 100% {transform: scale(-1) translateX(0vw);}
+  50% {transform: scale(-1) translateX(-3vw);}
+}
+
+/*@keyframes clickWhite {
+  0% { content:'&#10153;', color: black;}
+  100% { content:'&#10154;', color: white;}
+}*/
 
 /*background colorshift*/
 
