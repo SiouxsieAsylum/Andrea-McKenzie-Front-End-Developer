@@ -1,0 +1,351 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+#container {
+  position:relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 89, 0);
+  background: linear-gradient(rgb(255, 89, 0), rgb(255, 224, 50))
+}
+
+#sun {
+  position:absolute;
+  height:10vh;
+  width:10vh;
+  border-radius:10vh;
+  top: 35vh;
+  left: 35vh;
+  background-color:rgb(255, 224, 50);
+  box-shadow: inset 0vh 0vh 3vh
+rgb(255, 226, 160),0vh 0vh 3vh
+rgb(255, 226, 160);
+}
+
+#bottom-half {
+  position:absolute;
+  height: 60vh;
+  width: 100vw;
+  bottom:0;
+  background-color:rgb(255, 89, 0);
+  overflow: hidden;
+}
+
+#sand {
+  position:absolute;
+  height: 60vh;
+  width: 150vw;
+  background-color: rgb(135, 47, 0);
+  bottom: -20vh;
+  left: -20vw;
+  transform: rotate(-10deg);
+  z-index: 3;
+}
+
+#top-side {
+  margin-top: 2vh;
+  top:25vh;
+  margin-right: -30vw;
+  width: 40vw;
+  border-bottom: 15vh solid rgb(38, 20, 9);
+  border-right: 6vw solid transparent;
+  border-left: 6vw solid transparent;
+  z-index: 2;
+}
+
+#mountain-side {
+  margin-top: 2vh;
+  top:28vh;
+  margin-right: -30vw;
+  width: 50vw;
+  border-bottom: 10vh solid rgb(30, 19, 13);
+  border-right: 6vw solid transparent;
+  border-left: 6vw solid transparent;
+  z-index: 1;
+}
+
+.trapezoid {
+  position: absolute;
+/*   margin-top: 2vh; */
+  top:0;
+  right: 0;
+  margin-right: -25vw;
+  width: 30vw;
+  border-bottom: 10vh solid rgb(89, 38, 12);
+  border-right: 7vw solid transparent;
+  border-left: 7vw solid transparent;
+  z-index: 2;
+}
+
+#reflection-container{
+  position: absolute;
+/*   background-color: red; */
+  top:0;
+  left: 31vh;
+  width: 20vw;
+  height: 20vh;
+}
+
+.reflection {
+  position: absolute;
+  filter: blur(7px);
+}
+
+#sun1{
+   top: 0.1vh;
+  left: 1vh;
+  width: 15vh;
+  border-right:1vh solid transparent;
+  border-left:1vh solid transparent;
+  border-top: 2vh solid rgb(255, 224, 50);
+  animation: wiggle 2s infinite;
+}
+
+#sun2{
+  top: 2.9vh;
+  left: 2.2vh;
+  width: 12vh;
+  border-right:1vh solid transparent;
+  border-left:1vh solid transparent;
+  border-top: 2vh solid rgb(255, 224, 50);
+  animation: oppo-wiggle 2s infinite;
+}
+
+#sun3{
+  top: 5.9vh;
+  left: 3.4vh;
+  width: 9.5vh;
+  border-right:1vh solid transparent;
+  border-left:1vh solid transparent;
+  border-top: 2vh solid rgb(255, 224, 50);
+  animation: wiggle 2s infinite;
+}
+
+#sun4{
+  top: 8.6vh;
+  left: 4.6vh;
+  width: 7vh;
+  border-right:1vh solid transparent;
+  border-left:1vh solid transparent;
+  border-top: 2vh solid rgb(255, 224, 50);
+  animation: oppo-wiggle 2s infinite;
+}
+
+#sun5{
+  top: 11.2vh;
+  left: 5.8vh;
+  width: 4.5vh;
+  border-right:1vh solid transparent;
+  border-left:1vh solid transparent;
+  border-top: 2vh solid rgb(255, 224, 50);
+  animation: wiggle 2s infinite;
+}
+
+#overlay{
+  z-index: 9;
+  position: absolute;
+  width:50vw;
+  height: 100vh;
+  top:0;
+  right: 0;
+  background-color: rgba(255,255,255, 0.3);
+  background: linear-gradient(rgba(255,255,255, 0.3), rgba(255,255,255, 1.0))
+}
+
+#beach-blanket {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(https://i.pinimg.com/originals/d2/1a/c7/d21ac7fffc7baef10b94f2f3e072673d.png);
+  width: inherit;
+  height: inherit;
+}
+
+#gradient {
+  position: absolute;
+  height: 30vh;
+  width: 50vw;
+  top: 7vh;
+  left: 50vw;
+    background: radial-gradient(rgb(89, 20, 12) 20%, rgb(48, 10, 6));
+  transform: skewX(55deg)
+}
+
+@keyframes wiggle{
+  0%{transform: translateX(0vh)}
+  25%{transform: translateX(1vh)}
+  50%{transform: translateX(0vh)}
+  75%{transform: translateX(-1vh)}
+  100%{transform: translateX(0vh)}
+/*   100%{transform: translateX(2vh)} */
+}
+
+@keyframes oppo-wiggle{
+  0%{transform: translateX(0vh)}
+  25%{transform: translateX(-1vh)}
+  50%{transform: translateX(0vh)}
+  75%{transform: translateX(1vh)}
+  100%{transform: translateX(0vh)}
+/*   100%{transform: translateX(2vh)} */
+}
+
+@keyframes radiate {
+  0%, 100% { box-shadow: 0px 0px 5px 5px rgba(221, 236, 255, 0.5);}
+  50% { box-shadow: 0px 0px 7px 7px rgba(221, 236, 255, 0.5);}
+}
+
+.laptop{
+  position: relative;
+  top: 2vh;
+  left: 15vh;
+  height: 10vh;
+  width: 10vw;
+  background-color: rgb(0,0,0);
+
+}
+
+#laptop-top{
+
+  left: 11vw;
+  transform: skew(-30deg)
+}
+
+#lap-container{
+    transform: skew(-45deg) ;
+}
+
+#laptop-screen{
+  position: absolute;
+  height: 8vh;
+  width: 8vw;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  background-color: rgb(206, 228, 255);
+  animation: radiate 2s infinite;
+}
+
+#profile-picture {
+  position: absolute;
+  top: 15vh;
+  left: 5vh;
+  height: 20vh;
+  width: 20vh;
+  border-radius:20vh;
+  border: 1vh double rgba(255,255,255, 0.5);
+  background-size: 150%;
+  background-position: center;
+  background-image: url(http://i346.photobucket.com/albums/p434/Andrea_McK/profile-photo-copy_zpsthkjirew.jpeg);
+}
+
+h1{
+  position: absolute;
+  font-family: 'Varela Round', sans-serif;
+  top: 15vh;
+  left: 30vh;
+  font-size: 10vh;
+  font-weight: bolder;
+  color: rgb(255,255,255) ;
+}
+
+#text-wrap{
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 41vh;
+  left: 5vh;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+#text-wrap p{
+  font-size: 3vh;
+  color: rgb(68, 64, 56);
+  font-weight: bolder;
+}
+
+#button-container {
+  float: left;
+  display:flex;
+  flex-flow: row wrap;
+  width: 20vw;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.nav-but{
+  z-index: 999;
+  height: 6vh;
+  width: 6vw;
+  padding: 1vh;
+  display:flex;
+  justify-content: center;
+  margin: 1vh;
+  font-size: 2vh;
+  color: rgba(255,255,255,0.0);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.25s;
+}
+
+#employment{
+  background-image: url(../images/white-briefcase.png);
+}
+
+#employment:hover{
+  background-color: rgba(40, 38, 33, 0.7);
+  color: white;
+}
+
+#education{
+  background-image: url(../images/graduation-cap-xxl.png);
+}
+
+#education:hover{
+  background-color: rgba(40, 38, 33, 0.7);
+  color: white;
+}
+
+#projects{
+  background-image: url(../images/transparent-folder.png);
+}
+
+#projects:hover{
+  background-color: rgba(40, 38, 33, 0.7);
+  color: white;
+}
+
+#online-presence{
+  background-size: 60%;
+  background-image: url(../images/search-icon.png);
+}
+
+#online-presence:hover{
+  background-color: rgba(40, 38, 33, 0.7);
+  color: white;
+}
+
+#skills{
+  background-image: url(../images/ribbon-icon.png);
+}
+
+#skills:hover{
+  background-color: rgba(40, 38, 33, 0.7);
+  color: white;
+}
+
+#float-container {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 61vh;
+  left: 5vh;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+#float-container p {
+  font-size: 2.5vh;
+  color: rgb(91, 86, 75);
+}
+
+
