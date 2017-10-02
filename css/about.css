@@ -3,6 +3,10 @@
   margin:0;
 }
 
+a {
+  text-decoration: none;
+}
+
 #container {
   position:relative;
   height: 100vh;
@@ -236,8 +240,9 @@ rgb(255, 226, 160);
   border: 1vh double rgba(255,255,255, 0.5);
   background-size: 150%;
   background-position: center;
-  background-image: url(http://i346.photobucket.com/albums/p434/Andrea_McK/profile-photo-copy_zpsthkjirew.jpeg);
+  background-image: url(../images/profile-photo-copy.jpeg);
 }
+
 
 h1{
   position: absolute;
