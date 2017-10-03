@@ -225,7 +225,7 @@ rgb(255, 226, 160);
 }
 
 #lap-container{
-    /*background-color: red;*/
+
     position: relative;
     transform: skew(-45deg) ;
 }
