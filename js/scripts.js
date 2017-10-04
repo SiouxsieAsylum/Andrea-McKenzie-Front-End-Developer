@@ -20,8 +20,10 @@ function populate() {
 	for ( let i = 1; i <= numOfDivs; i++){
 		var newDiv = document.createElement('div');
 		newDiv.className = "square";
-		newDiv.style.height = "25px";
-		newDiv.style.width = "20px";
+		newDiv.style.height = "3vh";
+		newDiv.style.width = "2vh";
+    newDiv.style.fontSize = "3vh";
+    newDiv.style.lineHeight = "0";
     	newDiv.style.display = "inline-block";
     	header[0].appendChild(newDiv);
 

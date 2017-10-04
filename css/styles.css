@@ -1,3 +1,5 @@
+/*@media (min-aspect-ratio: 2:1){*/
+
 body {
 	overflow-x: hidden;
 	position: relative;
@@ -12,7 +14,7 @@ body {
    position: absolute;
    z-index: 9999;
    height: 30px;
-   width: 100vw;
+   width: 110vw;
    background-color: rgba(0, 0, 0, 0.7);
    white-space: nowrap;
 }
@@ -24,9 +26,7 @@ a {
 ul {
 	position: absolute;
   right: 0;
- 	  /*position: fixed;*/
-    /*margin-right: 50vw;*/
-  	list-style-type: none;
+  list-style-type: none;
 }
 
 li {
@@ -34,7 +34,7 @@ li {
   color: rgb(209, 209, 209);
   display: inline;
   float: right;
-  margin-top: -13px;
+  margin-top: 0.5vh;
   margin-right: 5vw;
 }
 
@@ -66,21 +66,9 @@ header div {
 }
 
 
-
-
 /*~~~~~~~~~~~~~~~~~~black overlay~~~~~~~~~~~~~~~~~*/
 
-#icon-wrapper{
-  position: absolute;
-  z-index: 2;
-  top:0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background: radial-gradient(circle, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.8));
-  transition: 1s;
-  opacity: 0;
-}
+
 
 #text-wrapper{
   position: absolute;
@@ -89,60 +77,70 @@ header div {
   left: 0;
   height: 100vh;
   width: 100vw;
-  /*background: radial-gradient(circle, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.8));*/
-  /*transition: 1s;*/
-  /*opacity: 0;*/
 }
 
 .header-text {
   font-family:'Ubuntu', sans-serif;
-  filter: none;
-  position: absolute;
   color: white;
   white-space: nowrap;
+  text-align: center;
   text-shadow: 1px 1px 5px rgb(153, 192, 219);
   opacity: 1;
 }
 
-h1 {
+ h1 {
 
-  font-size: 155px;
-  padding-top: 25vh;
-  margin-left: 7vw;
+  font-size: 15vh;
+  padding-top: 35vh;
+  /*margin-left: 10vw;*/
 }
 
 h2 {
 
-  font-size: 80px;
-  padding-top: 50vh;
-  margin-left: 25vw;
+  font-size: 7vh;
+  padding-top: 10vh;
+  /*margin-left: 25vw;*/
   color:rgb(199, 215, 226);
 }
 
 h3 {
 
-  font-size: 60px;
-  padding-top: 62vh;
-  margin-left: 32vw;
+  font-size: 5vh;
+  padding-top: 12vh;
+  /*margin-left: 32vw;*/
   color:rgb(199, 215, 226)
 }
 
-.menuIcon {
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 10vh;
-  width: 10vh;
-  text-indent: -99999px;
-  /*opacity: 0;*/
+  #icon-wrapper{
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+    width: 110vw;
+    top:0;
+    left: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.8));
   transition: 1s;
-}
+  opacity: 0;
+
+  }
+
+  .menuIcon {
+    height: 5vh;
+    width:5vh;
+    position: relative;
+    margin-left: 95vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+    transition: 1s;
+  }
 
 #projects{
 background-image:url(../images/white-icons/transparent-white-folder.png);
-top: 10vh;
-left: 10vh;
 transition: 0s;
 z-index: 1;
 }
@@ -153,8 +151,6 @@ z-index: 1;
 
 #skills{
   background-image:url(../images/white-icons/ribbon-icon.png);
-  top: 10vh;
-  right: 10vh;
   z-index: 1;
 }
 
@@ -165,8 +161,6 @@ z-index: 1;
 #websites{
   background-image:url(../images/white-icons/search-icon.png);
   /*margin-left*/
-  left: 49vw;
-  top: 27vh;
   z-index: 1;
 }
 
@@ -176,8 +170,6 @@ z-index: 1;
 
 #employment{
   background-image:url(../images/white-icons/white-briefcase.png);
-  bottom: 10vh;
-  left: 10vh;
 
 }
 
@@ -187,8 +179,6 @@ z-index: 1;
 
 #education{
   background-image:url(../images/white-icons/graduation-cap-xxl.png);
-  bottom: 10vh;
-  right: 10vh;
   transform-origin: 0%,0%;
 }
 
@@ -252,8 +242,6 @@ h3 {
   border-bottom: 255px solid rgb(7, 7, 7);
   border-left: 200px solid transparent;
   border-top: 100px solid transparent;
-  /*margin-top:47%;*/
-  /*margin-left: 62%;*/
   bottom:0vw;
   right:-10vw;
 }
@@ -266,8 +254,6 @@ h3 {
   border-top: 50px solid transparent;
   bottom:0;
   right:0;
-  /*margin-top:58%;*/
-  /*margin-left: 58%;*/
 }
 
 #far{
@@ -313,7 +299,6 @@ h3 {
 /*~~~~~~~~~~~~~~~~~~buttonContainer~~~~~~~~~~~~~~~~~~*/
 
 #buttonsContainer {
-  /*background-color: red;*/
   position: absolute;
   margin-top: 40vh;
   height: 5vh;
@@ -363,36 +348,30 @@ h3 {
 /*~~~~~~~~~~~~~~~~~~~~DUNES~~~~~~~~~~~~~~~~~~~~*/
 
 #duneContainer{
+  background-color: rgb(28, 92, 255);
+  background: linear-gradient(rgb(28, 92, 255),rgb(130, 165, 255));
   position:relative;
-  height: 100vh;
-  width:100vw;
+  height: 110vh;
+  width:110vw;
   margin:0;
   padding:0;
   overflow: hidden;
 
 }
 
-#duneContainer h1 {
-  font-size: 6vh;
-  position: absolute;
-  /*top: 0;*/
-  /*left: -5vw;*/
-}
-
-
-#sky{
-  background-color: rgb(28, 92, 255);
-  background: linear-gradient(rgb(28, 92, 255),rgb(130, 165, 255));
+#sky {
+/*  background-color: rgb(28, 92, 255);
+  background: linear-gradient(rgb(28, 92, 255),rgb(130, 165, 255));*/
   height: 110vh;
   width: 110vw;
-
 }
 
 #dunes {
   padding: 0;
   height: 101vw;
   position: absolute;
-  margin-top: 30vh;
+  /*margin-top: 30vh;*/
+  top: 150vh;
   width: 40vw;
   padding-right: 30vh;
   transform: rotate(270deg);
@@ -687,4 +666,5 @@ h3 {
 		margin-right: 10px;
 	}
 }*/
+
 
