@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Varela+Round" rel="stylesheet">
+</head>
+<body>
+
+<div id="nav">
+  <ul>
+    <a href="pages/about.html"><li>About Me</li></a>
+    <a href=""><li>Education</li></a>
+    <a href="#duneContainer"><li>Work History</li></a>
+    <a href="pages/portfolio.html"><li>Projects</li></a>
+    <a href="#scene"><li>Online Presence</li></a>
+  </ul>
+</div>
+
+
+<div id="portfolio-container">
+ <div id="diagonal-container">
+  <div class="diagonal" id="left"></div><div class="diagonal" id="right"></div>
+
+  </div>
+ <div id= "horizon">
+  <div id="shore"></div>
+ </div>
+
+  <div id="image-container"></div>
+
+ <div id = "project-container">
+  <div class = "display"id="ss">
+   <div class = "project">
+     <a target="_blank" href="http://shadowstar-returns.bitballoon.com/"><button class = "site-link"> Live</button></a>
+     <a target="_blank" href="https://github.com/SiouxsieAsylum/ShadowStar-Returns"><button class = "site-link">Github</button></a>
+   </div>
+  </div>
+
+  <div class = "display" id="su">
+   <div class = "project" >
+      <a target="_blank" href="http://we-are-the-crystal-gems.bitballoon.com/"><button class = "site-link"> Live</button></a>
+      <a target="_blank" href="https://github.com/SiouxsieAsylum/calculator"><button class = "site-link">Github </button></a>
+   </div>
+  </div>
+
+  <div class = "display" id="ds">
+   <div class = "project" >
+    <a target="_blank" href="https://siouxsieasylum.github.io/Dissonance/"><button class = "site-link"> Live</button></a>
+    <a target="_blank" href="https://github.com/SiouxsieAsylum/Dissonance"><button class = "site-link">Github</button></a>
+   </div>
+  </div>
+
+  <div class = "display" id="ly">
+   <div class = "project" >
+     <a target="_blank" href=" https://siouxsieasylum.github.io/Bellydancing-By-Layla/"><button class = "site-link"> Live</button></a>
+     <a target="_blank" href="https://github.com/SiouxsieAsylum/Bellydancing-By-Layla"><button class = "site-link">Github</button></a>
+   </div>
+  </div>
+
+  <div class = "display" id="ttt">
+   <div class = "project">
+     <a target="_blank" href="https://siouxsieasylum.github.io/tic-tac-toe/"><button class = "site-link"> Live</button></a>
+     <a target="_blank" href="https://github.com/SiouxsieAsylum/tic-tac-toe/"><button class = "site-link">Github</button></a>
+   </div>
+ </div>
+
+</div>
+
+<!-- <script type="text/javascript" src="../js/scripts.js"></script> -->
+
+<script>
+
+let projects = document.getElementsByClassName("display");
+
+let portfolioBackground = document.getElementById("image-container");
+window.addEventListener("DOMContentLoaded", function(){
+function setEventListeners(){
+  for (let p of projects){
+    p.addEventListener("mouseover", function(){
+      gleanStyle = p.currentStyle || window.getComputedStyle(p, false),
+      projectBackground = gleanStyle.backgroundImage.slice(4, -1);
+      portfolioBackground.style.backgroundImage = `url(${projectBackground})`
+    })
+    p.addEventListener("mouseleave", function(){
+      // console.log("leaving");
+      portfolioBackground.style.backgroundImage = "initial";
+    })
+  }
+}
+
+  setEventListeners();
+})
+
+
+</script>
+</body>
+</html>

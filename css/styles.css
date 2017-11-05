@@ -14,7 +14,7 @@ body {
    position: absolute;
    z-index: 9999;
    height: 30px;
-   width: 110vw;
+   width: 100vw;
    background-color: rgba(0, 0, 0, 0.7);
    white-space: nowrap;
 }
@@ -370,7 +370,6 @@ h3 {
   padding: 0;
   height: 101vw;
   position: absolute;
-  /*margin-top: 30vh;*/
   top: 150vh;
   width: 40vw;
   padding-right: 30vh;
@@ -422,14 +421,14 @@ h3 {
 
 #background{
   margin-top: -30vh;
-  margin-left: -8vw;
+  /*margin-left: -8vw;*/
   background-color: rgb(178, 135, 49);
   transform: rotate(-10deg);
 }
 
 #content-container {
   position: absolute;
-  margin-top: -100vh;
+  margin-top: -90vh;
   height: 40vw;
   width: 100vw;
   display: flex;
