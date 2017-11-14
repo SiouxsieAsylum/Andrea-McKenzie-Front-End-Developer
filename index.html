@@ -1,127 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Andrea McKenzie</title>
+  <title>About Andrea McKenzie</title>
 
-<!-- added the meta for responsiveness -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/about.css">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Varela+Round" rel="stylesheet">
 
-
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<!-- <link rel="stylesheet" type="text/css" href="css/mobile.css"> -->
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<link href="https://fonts.googleapis.com/css?family=Titillium+Web|Ubuntu" rel="stylesheet">
 
 </head>
-<body onload="populate();scrollTo();">
+<body>
+  <div id="container">
 
+  <div class="top" id="profile-picture"></div>
+  <h1 class="top">Andrea McKenzie</h1>
 
-<header id = "blue-header"></header>
+  <div id = "sun"></div>
+  <div class="trapezoid" id="top-side"></div>
+    <div class="trapezoid" id="mountain-side"></div>
+  <div id="bottom-half">
+<!--   ground   -->
+    <div class="trapezoid"></div>
 
+    <div id="reflection-container">
+    <div class = "reflection" id= "sun1"></div>
+    <div class = "reflection" id= "sun2"></div>
+    <div class = "reflection" id= "sun3"></div>
+    <div class = "reflection" id= "sun4"></div>
+    <div class = "reflection" id= "sun5"></div>
+    </div>
 
-<div id = "icon-wrapper">
-  <a href="pages/portfolio.html"><div class= "menuIcon" id="projects"><p>Projects</p></div></a>
-  <a href=""><div class= "menuIcon" id="skills"><p>Skills</div></p></a>
-  <a href="#scene"><div class= "menuIcon" id="websites"><p>Online Presence</p></div></a>
-  <a href="#duneContainer"><div class= "menuIcon" id="employment"><p>Employment History</p></div></a>
-  <a href=""><div class= "menuIcon" id="education"><p>Education</div></p></a>
-</div>
-
-<div id = "text-wrapper">
-  <h1 class="header-text">Andrea McKenzie</h1>
-  <h2 class="header-text">Full Stack Developer</h2>
-  <h3 class="header-text">Android Developer</h3>
-</div>
-
-
-
-<div id="nav">
-  <ul>
-    <a href="pages/about.html"><li>About Me</li></a>
-    <a href=""><li>Education</li></a>
-    <a href="#duneContainer"><li>Work History</li></a>
-    <a href="pages/portfolio.html"><li>Projects</li></a>
-    <a href="#scene"><li>Online Presence</li></a>
-  </ul>
-</div>
-
-<!-- have a layered div over the header with dark black radius translucent to black -->
-<!-- have the text all fly in from all sides and random hover effects with keyframes-->
-  <!-- how to transition between screens? -->
-
-
-<div id="scene">
-  <span id="starContainer"></span>
-
-
-  <div class="ground" id="far"></div>
-  <div class="ground" id="main"></div>
-  <div class="ground" id="high"></div>
-  <div class="ocean" id="light"></div>
-  <div class="ocean" id="mid"></div>
-  <div class="ocean" id="dark"></div>
-
-  <div id="buttonsContainer">
-    <a href="https://github.com/SiouxsieAsylum"><div class="online-presence" id="myGithub"><!-- <img src="images/githubicon.png" alt="My GitHub"> --></div></a>
-    <a href="https://www.linkedin.com/in/andrea-mckenzie-93abb649/"><div class="online-presence" id="myLinkedIn"><!-- <img src="images/LinkedinLogoTransparent.png" alt="My LinkedIn"> --></div></a>
-    <a href="https://codepen.io/SiouxsieAsylum/"><div class="online-presence" id="myCodepen"><!-- <img src="images/codepen.png" alt="My CodePen"> --></div></a>
-  <!-- <a href="https://github.com/SiouxsieAsylum"><div class="online-presence"><img src="" alt="My GitHub"></div></a> -->
-  </div>
-</div>
-
-<div id="duneContainer">
-     <p id="use-arrow">Use your left and right arrow keys
-
-<span id="back-arrow" onclick="jobUp()">&#10153;</span><span id = "front-arrow"  onclick="jobDown()">&#10153;</span>
-
-
-
-to switch between jobs.</p>
-
-<div id="sky">
-
-</div>
-  <div id = "content-container">
-
-      <div id = "jobs">
-        <div id="jobLogo"></div>
-        <p id="dates-and-localle"></p>
+    <div id="sand">
+      <div id="gradient">
+        <div id="beach-blanket">
+          <div id = "lap-container">
+          <div class="laptop" id="laptop-top">
+            <div id="laptop-screen"></div>
+          </div>
+          <div class="laptop" id="laptop-base"></div>
+          </div>
+          </div>
+        </div>
       </div>
-      <div id="descContainer">
-        <p id = "description"></p>
+    </div>
+  </div>
+
+  <div id="resume" class="modalDialog">
+  <a href="#close" title="Close" class="close">X</a>
+      <div id="formatting">
+        <div id="resume-display">
+
+        </div>
       </div>
   </div>
-  <div id = "dunes">
-    <div class="dune" id="front"></div>
-    <div class="dune" id="secondFront"></div>
-    <div class="dune" id="thirdFront"></div>
+
+
+  <div id="overlay">
+     <div class="bottom" id="profile-picture"></div>
+     <h1 class="bottom">Andrea McKenzie</h1>
+
+    <div id="text-wrap"><p>New York born and bred, I am a front-end developer in practice and a full-stack developer in training and with an interest in creating and maintaining Android applications. </p></div>
+
+    <div id="float-container">
+       <div id="button-container">
+
+        <a href="https://github.com/SiouxsieAsylum"><div class="nav-but" id="github">GitHub</div></a>
+        <a href="#resume"><div class="nav-but" id="briefcase">Resume</div></a>
+
+      </div>
+      <p>Creativity is key. I believe that all problems can be solved with strong communication, a bit of follow-through, and a modicum of respect. I am diligent and ambitious, and I treat everything as a learning experience.</p>
+      <br>
+      <p>My full website is currently under construction. Click the Git icon to see my personal github, and click the briefcase underneath to see my resume.</p>
+    </div>
+
   </div>
-  <div id="ground">
-    <div class = "sand" id="foreground"></div>
-    <div class = "sand" id="background"></div>
-  </div>
-    <!-- <h1>Employment History</h1> -->
 </div>
-
-
-
-</div>
-
-
-
-<!-- any extraneous jquery -->
-<!-- <script>
-$(document).ready(function() {
-	$(header).on("click", function(){
-		$(header).slideUp("slow");
-	});
-});
-
-</script> -->
-<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
