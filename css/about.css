@@ -213,21 +213,15 @@ rgb(255, 226, 160);
 
 }
 
-/*will require a media query to consistantly align the laptop*/
-#laptop-base {
-  /*top: 12vh;*/
-}
 
 #laptop-top{
-  /*position: absolute;*/
-  left: 11vw;
-  transform: skew(-30deg)
+  transform: skew(-30deg);
+  transform-origin:0% 100%;
 }
 
 #lap-container{
-
-    position: relative;
-    transform: skew(-45deg) ;
+  position: relative;
+  transform: skew(-45deg) ;
 }
 
 #laptop-screen{
@@ -358,10 +352,21 @@ h1{
   left: 5vh;
   font-family: 'Maven Pro', sans-serif;
 }
-/* requires media query to properly fit in portait*/
+
 #float-container p {
   font-size: 2.5vh;
   color: rgb(91, 86, 75);
+}
+
+@media screen and (max-width: 800px){
+  #text-wrap{
+    display:flex;
+    justify-content: center;
+  }
+
+  #button-container{
+    float: initial;
+  }
 }
 
 
