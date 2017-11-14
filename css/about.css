@@ -247,7 +247,6 @@ rgb(255, 226, 160);
   background-image: url(../images/profile-photo-copy.jpeg);
 }
 
-/*need a media query to fit into screen when portait*/
 h1{
   position: absolute;
   font-family: 'Varela Round', sans-serif;
@@ -271,7 +270,6 @@ h1{
   font-family: 'Maven Pro', sans-serif;
 }
 
-/* requires media query to properly fit in portait*/
 #text-wrap p{
   font-size: 3vh;
   color: rgb(68, 64, 56);
@@ -296,7 +294,7 @@ h1{
   margin: 1vh;
   font-size: 2vh;
   color: rgba(255,255,255,0.0);
-  background-size: 80%;
+  background-size: 65%;
   background-repeat: no-repeat;
   background-position: center;
   transition: 0.25s;
