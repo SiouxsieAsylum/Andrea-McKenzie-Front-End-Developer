@@ -430,11 +430,9 @@ h1{
   position: relative;
     width:90vw;
     top:5vh;
-    /*top:10vh;*/
   }
 
   #float-container {
-  /*position: absolute;*/
   position: relative;
   width: 90vw;
   height: auto;
