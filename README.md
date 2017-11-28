@@ -2,16 +2,7 @@
 ## An experiment into the limits of CSS3... And Andrea McKenzie
 [Email](mailto:mckenzie.andrea.m@gmail.com) 
 [LinkedIn](https://www.linkedin.com/in/andrea-mckenzie/)
-<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
-<div id="SkypeButton_Call_andrea-michelle-mckenzie_1">
- <script type="text/javascript">
- Skype.ui({
- "name": "dropdown",
- "element": "SkypeButton_Call_andrea-michelle-mckenzie_1",
- "participants": ["andrea-michelle-mckenzie"]
- });
- </script>
-</div>
+[Skype](andrea-michelle-mckenzie)
 
 ------
 
