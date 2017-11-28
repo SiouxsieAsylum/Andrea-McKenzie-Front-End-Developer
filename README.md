@@ -1,8 +1,8 @@
 # Andrea McKenzie: Full Stack Developer
 ## An experiment into the limits of CSS3... And Andrea McKenzie
-[Email](mailto:mckenzie.andrea.m@gmail.com) 
-[LinkedIn](https://www.linkedin.com/in/andrea-mckenzie/)
-[Skype](andrea-michelle-mckenzie)
+[Email: mckenzie.andrea.m@gmail.com](mailto:mckenzie.andrea.m@gmail.com) 
+[LinkedIn: Andrea McKenzie](https://www.linkedin.com/in/andrea-mckenzie/)
+Skype: andrea-michelle-mckenzie
 
 ------
 
